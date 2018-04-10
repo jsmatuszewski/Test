@@ -1,0 +1,16 @@
+#!/usr/local/bin/python3
+def main():
+
+    #An example of split, with a maxsplit, and a flag
+
+    import re
+
+    print(re.split(r'(\s*)','this is a test split'))
+
+    print(re.split(r'(\s*)','this is a test split with a maxsplit of 2',2))
+
+    print(re.split(r'[a-z]*\s*','My password is 123a456b789C123',flags=re.IGNORECASE))
+
+    
+if __name__ == '__main__':
+    main()

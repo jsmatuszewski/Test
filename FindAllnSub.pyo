@@ -1,0 +1,34 @@
+#!/usr/local/bin/python3
+
+#This program is of course hardly practical but rather a practice of the findall and sub methods
+
+import re
+
+def main():
+
+	findallY = "You there, welcome to my test program, maybe it'll work."
+
+	ysfound=re.findall(r'[a-z]*y[a-z]*', findallY, re.I) #Finds All Y and Ignores Case
+
+	for ywords in ysfound:
+
+        	print(ywords)
+	
+	#Replace All Y's with i and print them
+
+	for ywords in ysfound:
+	
+		ywords=re.sub('y|Y',"i",findallY)
+
+		print(ywords)
+
+	#Same as prior section but counts number of subs and returns tuple
+
+	for ywords in ysfound:
+
+                ywords=re.subn('y|Y',"i",findallY)
+
+                print(ywords)
+
+if __name__ == '__main__':
+    main()
